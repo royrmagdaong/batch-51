@@ -1,7 +1,7 @@
 'use client'
 import NavBar from "./component/nav-bar";
 import withDataFetching from "./component/with-data-fetching";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import LeftSide from "./component/home-page-left";
 import RightSide from "./component/home-page-right";
 import JobContext from "./context/JobContext";
@@ -10,7 +10,7 @@ let url = './jobs.json'
 
 const Home = (props) => {
 
-  const [jobs, setJobs] = useState([])
+  const [job, setJob] = useState([])
 
   return (
     <div>
@@ -22,7 +22,7 @@ const Home = (props) => {
         } */}
 
        <div className="flex">
-        <JobContext.Provider value={{jobs: props.data?.jobs}}>
+        <JobContext.Provider value={{jobs: props.data?.jobs, job, setJob}}>
           <LeftSide />
           <RightSide />
         </JobContext.Provider>
