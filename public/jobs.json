@@ -1,0 +1,44 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "company": "TechCorp Solutions",
+      "position_title": "Frontend Developer",
+      "salary": 85000,
+      "location": "New York, NY",
+      "description": "We are looking for a skilled Frontend Developer to join our team and help us build modern, responsive web applications. The ideal candidate will have experience with React.js, HTML5, CSS3, and a strong understanding of UI/UX principles. You’ll collaborate with designers and backend developers to bring dynamic web interfaces to life."
+    },
+    {
+      "id": 2,
+      "company": "Innovatech Ltd.",
+      "position_title": "Backend Engineer",
+      "salary": 95000,
+      "location": "San Francisco, CA",
+      "description": "Join our engineering team as a Backend Engineer responsible for developing robust and scalable server-side applications. You’ll work with Node.js, Express, and MongoDB, and ensure our APIs are reliable and secure. This role requires problem-solving skills and a deep understanding of system architecture."
+    },
+    {
+      "id": 3,
+      "company": "DataStream Analytics",
+      "position_title": "Data Scientist",
+      "salary": 110000,
+      "location": "Seattle, WA",
+      "description": "We're seeking a Data Scientist to extract meaningful insights from complex datasets. The role involves working with Python, SQL, machine learning frameworks, and visualization tools. You’ll collaborate with cross-functional teams to influence product decisions and improve business outcomes through data-driven strategies."
+    },
+    {
+      "id": 4,
+      "company": "CyberNet Systems",
+      "position_title": "Cybersecurity Analyst",
+      "salary": 92000,
+      "location": "Austin, TX",
+      "description": "CyberNet Systems is hiring a Cybersecurity Analyst to strengthen our digital defenses. You’ll be responsible for identifying vulnerabilities, responding to incidents, and implementing security protocols. Ideal candidates have experience with intrusion detection systems, threat modeling, and risk assessment tools."
+    },
+    {
+      "id": 5,
+      "company": "GreenTech Global",
+      "position_title": "Project Manager",
+      "salary": 98000,
+      "location": "Denver, CO",
+      "description": "We’re looking for a Project Manager to oversee software development projects in the clean tech space. You’ll coordinate between cross-functional teams, manage timelines and budgets, and ensure timely delivery of high-quality products. PMP certification and agile methodology experience are preferred."
+    }
+  ]
+}

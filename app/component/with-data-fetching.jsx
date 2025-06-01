@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 const withDataFetching = (WrapperComponent, url) => {
     return (props) => {
         // const [data, setData] = useState({attachments: ['']})
-        const [data, setData] = useState()
+        const [data, setData] = useState([])
 
         useEffect(()=>{
             const fetchData = () => {
@@ -12,7 +12,7 @@ const withDataFetching = (WrapperComponent, url) => {
                 .then(async (response) => {
                     // handle success
                     setData(response.data)
-                    // console.log('fetched data', response.data)
+                    console.log('fetched data', response.data)
                 })
                 .catch(function (error) {
                     // handle error
@@ -23,7 +23,7 @@ const withDataFetching = (WrapperComponent, url) => {
             fetchData()
         }, [])
 
-        return <WrapperComponent {...props} data={data}/>;
+        return <WrapperComponent {...props} data={data || [{company:'', id:1}]}/>;
     }
 }
  
