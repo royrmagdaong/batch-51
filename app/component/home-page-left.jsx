@@ -9,6 +9,10 @@ const LeftSide = () => {
 
     useEffect(()=> {
          console.log('from left side', jobs)
+
+         let token = JSON.parse(localStorage.getItem('currentUser'))
+
+        console.log('token', JSON.parse(localStorage.getItem('currentUser')))
     }, [])
 
     // console.log('from left side', jobs)

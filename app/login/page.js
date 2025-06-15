@@ -17,26 +17,37 @@ const Login = () => {
         console.log('email', email)
         console.log('password', password)
 
-        axios.get('./users.json')
-        .then(async (response) => {
-            // handle success
-            console.log('users', response.data)
-            
-            const loginUser = response.data?.users?.filter((user)=>{
-                return user.email === email && user.password === password
-            })
+        axios.post('http://localhost:5000/api/user/login', {
+            password: password, email: email
+        }).then(res=>{
+            console.log('response', res)
 
-            console.log('Logged in user: ', loginUser[0])
-
-            localStorage.setItem('currentUser', JSON.stringify({email: loginUser[0].email, role: loginUser[0].role}))
-            // console.log('current User: ', localStorage.)
-
+            localStorage.setItem('currentUser', JSON.stringify({token: res?.data?.user.token}))
             router.push('/')
+        }).catch(err=>{
+            console.log('error', err)
         })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
+
+        // axios.get('./users.json')
+        // .then(async (response) => {
+        //     // handle success
+        //     console.log('users', response.data)
+            
+        //     const loginUser = response.data?.users?.filter((user)=>{
+        //         return user.email === email && user.password === password
+        //     })
+
+        //     console.log('Logged in user: ', loginUser[0])
+
+        //     localStorage.setItem('currentUser', JSON.stringify({email: loginUser[0].email, role: loginUser[0].role}))
+        //     // console.log('current User: ', localStorage.)
+
+        //     router.push('/')
+        // })
+        // .catch(function (error) {
+        //     // handle error
+        //     console.log(error);
+        // })
     }
 
     useEffect(()=>{

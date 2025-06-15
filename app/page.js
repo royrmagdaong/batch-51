@@ -5,12 +5,23 @@ import { useEffect, useState, useContext } from "react";
 import LeftSide from "./component/home-page-left";
 import RightSide from "./component/home-page-right";
 import JobContext from "./context/JobContext";
+import axios from 'axios'
 
 let url = './jobs.json'
 
 const Home = (props) => {
 
   const [job, setJob] = useState([])
+
+  useEffect(()=>{
+    // axios.post('http://localhost:5000/',{password: 'password123', username: 'roy'}).then(res=>{
+    //   console.log('response from nodejs server', res)
+    // }).catch(err=>{
+    //   console.log('ERROR', err)
+    // })
+
+    
+  }, [])
 
   return (
     <div>
